@@ -1,0 +1,220 @@
+/* Basic resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Container styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Note Form styling */
+.note-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.note-form input,
+.note-form textarea,
+.note-form select {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#note-content {
+    height: 100px;
+}
+
+#add-note-btn {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+#add-note-btn:hover {
+    background-color: #218838;
+}
+
+/* Search bar styling */
+.search-bar {
+    margin-bottom: 20px;
+}
+
+#search-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Category Filter Styling */
+.category-filter {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+/* Specific Colors for Each Category Button */
+.filter-btn {
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+/* All Button */
+.filter-btn[data-category="all"] {
+    background-color: #6c757d; /* Neutral Grey for "All" */
+}
+
+.filter-btn[data-category="Work"] {
+    background-color: #007bff; /* Blue for Work */
+}
+
+.filter-btn[data-category="Personal"] {
+    background-color: #e83e8c; /* Pink for Personal */
+}
+
+.filter-btn[data-category="Study"] {
+    background-color: #28a745; /* Green for Study */
+}
+
+.filter-btn[data-category="Others"] {
+    background-color: #ffc107; /* Yellow for Others */
+}
+
+/* Hover effects */
+.filter-btn[data-category="all"]:hover {
+    background-color: #5a6268;
+}
+
+.filter-btn[data-category="Work"]:hover {
+    background-color: #0056b3;
+}
+
+.filter-btn[data-category="Personal"]:hover {
+    background-color: #c8235d;
+}
+
+.filter-btn[data-category="Study"]:hover {
+    background-color: #218838;
+}
+
+.filter-btn[data-category="Others"]:hover {
+    background-color: #e0a800;
+}
+
+
+/* Notes List Styling */
+#notes-list {
+    list-style: none;
+    padding: 0;
+}
+
+.note-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.note-item h2 {
+    margin-bottom: 10px;
+}
+
+.note-item p {
+    margin-bottom: 10px;
+}
+
+.note-item small {
+    color: #888;
+}
+
+/* Note actions */
+.note-item .note-actions {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.note-actions button {
+    padding: 5px 10px;
+    margin-left: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.note-actions .edit-btn {
+    background-color: #ffc107;
+    color: #fff;
+}
+
+.note-actions .delete-btn {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.note-actions .edit-btn:hover {
+    background-color: #e0a800;
+}
+
+.note-actions .delete-btn:hover {
+    background-color: #c82333;
+}
+
+/* No Notes Message */
+#no-notes-message {
+    text-align: center;
+    color: #888;
+    font-size: 18px;
+    display: none;
+}
+/* Category Colors */
+.note-item.work {
+    background-color: #d4e9ff; /* Light Blue for Work */
+}
+
+.note-item.personal {
+    background-color: #ffd4e5; /* Light Pink for Personal */
+}
+
+.note-item.study {
+    background-color: #e4ffd4; /* Light Green for Study */
+}
+
+.note-item.others {
+    background-color: #fff7d4; /* Light Yellow for Others */
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Notes App</h1>
+
+        <!-- Note Input Section -->
+        <div class="note-form">
+            <input type="text" id="note-title" placeholder="Note Title" required>
+            <textarea id="note-content" placeholder="Write your note here..." required></textarea>
+            <select id="note-category">
+                <option value="" disabled selected>Select Category</option>
+                <option value="Work">Work</option>
+                <option value="Personal">Personal</option>
+                <option value="Study">Study</option>
+                <option value="Others">Others</option>
+            </select>
+            <button id="add-note-btn">Add Note</button>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search by title or content...">
+        </div>
+
+        <!-- Filter by Category -->
+        <div class="category-filter">
+            <button class="filter-btn" data-category="all">All</button>
+            <button class="filter-btn" data-category="Work">Work</button>
+            <button class="filter-btn" data-category="Personal">Personal</button>
+            <button class="filter-btn" data-category="Study">Study</button>
+            <button class="filter-btn" data-category="Others">Others</button>
+        </div>
+
+        <!-- Notes List -->
+        <ul id="notes-list"></ul>
+
+        <!-- No Notes Message -->
+        <div id="no-notes-message">No notes available. Add a note!</div>
+    </div>
+</body>
+</html>
